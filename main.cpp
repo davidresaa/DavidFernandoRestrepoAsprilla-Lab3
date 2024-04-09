@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-// Prototipos de funciones para cada problema
+
+// Funciones para cada problema
 void problema1();
 void problema2();
 void problema3();
@@ -10,12 +11,12 @@ void problema5();
 int main() {
     int opcion;
 
-    cout << "Seleccione un problema para ejecutar:" << std::endl;
-    cout << "1. Problema 1" << std::endl;
-    cout << "2. Problema 2" << std::endl;
-    cout << "3. Problema 3" << std::endl;
-    cout << "4. Problema 4" << std::endl;
-    cout << "5. Problema 5" << std::endl;
+    cout << "Seleccione un problema para ejecutar:" << endl;
+    cout << "1. Problema 1" << endl;
+    cout << "2. Problema 2" << endl;
+    cout << "3. Problema 3" << endl;
+    cout << "4. Problema 4" << endl;
+    cout << "5. Problema 5" << endl;
 
     cin >> opcion;
 
