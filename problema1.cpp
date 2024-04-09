@@ -1,10 +1,11 @@
 #include <iostream>
 #include "problema1.h"
+using namespace std;
 
 // Implementación de los métodos de la clase CuentaCorriente
 CuentaCorriente::CuentaCorriente() : saldo(0.0) {}
 
-CuentaCorriente::CuentaCorriente(std::string nombre, std::string apellidos, std::string direccion, std::string telefono, double saldo)
+CuentaCorriente::CuentaCorriente(string nombre, string apellidos, string direccion, string telefono, double saldo)
     : nombre(nombre), apellidos(apellidos), direccion(direccion), telefono(telefono), saldo(saldo) {}
 
 void CuentaCorriente::setNombre(std::string nombre) {
@@ -52,11 +53,11 @@ void CuentaCorriente::ingresarDinero(double cantidad) {
 }
 
 void CuentaCorriente::consultarCuenta() const {
-    std::cout << "Nombre: " << nombre << std::endl;
-    std::cout << "Apellidos: " << apellidos << std::endl;
-    std::cout << "Dirección: " << direccion << std::endl;
-    std::cout << "Teléfono: " << telefono << std::endl;
-    std::cout << "Saldo: " << saldo << std::endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Apellidos: " << apellidos << endl;
+    cout << "Dirección: " << direccion << endl;
+    cout << "Teléfono: " << telefono << endl;
+    cout << "Saldo: " << saldo << endl;
 }
 
 bool CuentaCorriente::saldoNegativo() const {
@@ -66,34 +67,34 @@ bool CuentaCorriente::saldoNegativo() const {
 // Función para interactuar con la clase CuentaCorriente
 void problema1() {
     int opcion;
-    std::string nombre, apellidos, direccion, telefono;
+    string nombre, apellidos, direccion, telefono;
     double saldoInicial;
     CuentaCorriente cuenta;
 
-    std::cout << "Seleccione una opción:" << std::endl;
-    std::cout << "1. Ingresar datos de la cuenta" << std::endl;
-    std::cout << "2. Crear cuenta con datos predefinidos" << std::endl;
-    std::cin >> opcion;
+    cout << "Seleccione una opción:" << std::endl;
+    cout << "1. Ingresar datos de la cuenta" << std::endl;
+    cout << "2. Crear cuenta con datos predefinidos" << std::endl;
+    cin >> opcion;
 
     if (opcion == 1) {
-        std::cout << "Ingrese nombre: ";
-        std::cin >> nombre;
+        cout << "Ingrese nombre: ";
+        cin >> nombre;
         cuenta.setNombre(nombre);
 
-        std::cout << "Ingrese apellidos: ";
-        std::cin >> apellidos;
+        cout << "Ingrese apellidos: ";
+        cin >> apellidos;
         cuenta.setApellidos(apellidos);
 
-        std::cout << "Ingrese dirección: ";
-        std::cin >> direccion;
+        cout << "Ingrese dirección: ";
+        cin >> direccion;
         cuenta.setDireccion(direccion);
 
-        std::cout << "Ingrese teléfono: ";
-        std::cin >> telefono;
+        cout << "Ingrese teléfono: ";
+        cin >> telefono;
         cuenta.setTelefono(telefono);
 
-        std::cout << "Ingrese saldo inicial: ";
-        std::cin >> saldoInicial;
+        cout << "Ingrese saldo inicial: ";
+        cin >> saldoInicial;
         cuenta.ingresarDinero(saldoInicial);
     }
     else if (opcion == 2) {
@@ -101,58 +102,58 @@ void problema1() {
         cuenta = CuentaCorriente("John", "Doe", "123 Main St", "555-1234", 1000.0);
     }
     else {
-        std::cout << "Opción inválida." << std::endl;
+        cout << "Opción inválida." << endl;
         return;
     }
 
     // Menú de interacción con la cuenta
     do {
-        std::cout << "\nSeleccione una opción:" << std::endl;
-        std::cout << "1. Consultar cuenta" << std::endl;
-        std::cout << "2. Editar datos de usuario" << std::endl;
-        std::cout << "3. Retirar dinero" << std::endl;
-        std::cout << "4. Ingresar dinero" << std::endl;
-        std::cout << "5. Salir" << std::endl;
-        std::cin >> opcion;
+        cout << "\nSeleccione una opción:" << endl;
+        cout << "1. Consultar cuenta" << endl;
+        cout << "2. Editar datos de usuario" << endl;
+        cout << "3. Retirar dinero" << endl;
+        cout << "4. Ingresar dinero" << endl;
+        cout << "5. Salir" << endl;
+        cin >> opcion;
 
         switch (opcion) {
             case 1:
                 cuenta.consultarCuenta();
                 break;
             case 2:
-                std::cout << "Ingrese nombre: ";
-                std::cin >> nombre;
+                cout << "Ingrese nombre: ";
+                cin >> nombre;
                 cuenta.setNombre(nombre);
 
-                std::cout << "Ingrese apellidos: ";
-                std::cin >> apellidos;
+                cout << "Ingrese apellidos: ";
+                cin >> apellidos;
                 cuenta.setApellidos(apellidos);
 
-                std::cout << "Ingrese dirección: ";
-                std::cin >> direccion;
+                cout << "Ingrese dirección: ";
+                cin >> direccion;
                 cuenta.setDireccion(direccion);
 
-                std::cout << "Ingrese teléfono: ";
-                std::cin >> telefono;
+                cout << "Ingrese teléfono: ";
+                cin >> telefono;
                 cuenta.setTelefono(telefono);
                 break;
             case 3:
                 double cantidadRetiro;
-                std::cout << "Ingrese la cantidad a retirar: ";
-                std::cin >> cantidadRetiro;
+                cout << "Ingrese la cantidad a retirar: ";
+                cin >> cantidadRetiro;
                 cuenta.retirarDinero(cantidadRetiro);
                 break;
             case 4:
                 double cantidadIngreso;
-                std::cout << "Ingrese la cantidad a ingresar: ";
-                std::cin >> cantidadIngreso;
+                cout << "Ingrese la cantidad a ingresar: ";
+                cin >> cantidadIngreso;
                 cuenta.ingresarDinero(cantidadIngreso);
                 break;
             case 5:
-                std::cout << "Saliendo..." << std::endl;
+                cout << "Saliendo..." << endl;
                 break;
             default:
-                std::cout << "Opción inválida." << std::endl;
+                cout << "Opción inválida." << endl;
                 break;
         }
     } while (opcion != 5);
