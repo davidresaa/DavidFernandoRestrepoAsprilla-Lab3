@@ -8,10 +8,12 @@ SOURCES += \
         problema1.cpp \
         problema2.cpp \
         problema3.cpp \
-        problema4.cpp
+        problema4.cpp \
+        problema5.cpp
 
 HEADERS += \
     problema1.h \
     problema2.h \
     problema3.h \
-    problema4.h
+    problema4.h \
+    problema5.h

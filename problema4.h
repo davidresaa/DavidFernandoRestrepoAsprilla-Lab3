@@ -14,6 +14,8 @@ public:
     void cargarReglas(const std::string& archivoReglas);
     std::string codificar(const std::string& mensaje);
     std::string decodificar(const std::string& mensaje);
+
+    void problema4();
 };
 
 #endif // PROBLEMA4_H

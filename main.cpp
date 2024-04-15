@@ -33,9 +33,9 @@ int main() {
         case 4:
             problema4();
             break;
-     //   case 5:
-          //  problema5();
-          //  break;
+        case 5:
+            problema5();
+            break;
         default:
             std::cout << "Opción inválida. Por favor seleccione un número del 1 al 5." << std::endl;
             break;
