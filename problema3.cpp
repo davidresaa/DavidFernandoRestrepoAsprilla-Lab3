@@ -1,5 +1,4 @@
 #include "problema3.h"
-
 BuscadorTexto::BuscadorTexto() {}
 
 void BuscadorTexto::buscarCaracter(const string& rutaArchivo, char caracter, ofstream& resultado) {
@@ -94,6 +93,7 @@ void problema3() {
     }
 
     resultado.close();
-    cout << "********************************************************************************";
-    cout << "El archivo con la información de resultado ha sido guardado con éxito en la ruta: " << rutaResultado << endl;
+
+    cout << "********************************************************************************"<<endl;
+    cout << "El archivo con la información del resultado ha sido guardado con éxito en la ruta: " << rutaResultado << endl;
 }
